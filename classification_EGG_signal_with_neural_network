@@ -1,35 +1,6 @@
-from google.colab import files
-uploaded = files.upload()
 
-from __future__ import absolute_import, division, print_function, unicode_literals
-import tensorflow as tf
-from tensorflow import keras
-
-import os
-import tempfile
-
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-
-import sklearn
-from sklearn.metrics import confusion_matrix
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-
-mpl.rcParams['figure.figsize'] = (12, 10)
-colors = plt.rcParams['axes.prop_cycle'].by_key()['color']
-
-file = tf.keras.utils
-raw_df = pd.read_csv('animo_507.csv')
-raw_df.head()
+https://colab.research.google.com/drive/1OGQ_OkPZ78V0C4B08G0okerbQzmBFP-o
 
 
-neg, pos = np.bincount(raw_df['class'])
-total = neg + pos
-print('Examples:\n    Total: {}\n    Positive: {} ({:.2f}% of total)\n'.format(
-    total, pos, 100 * pos / total))
 
 
