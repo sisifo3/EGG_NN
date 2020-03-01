@@ -62,12 +62,12 @@ for lon in range(len(array_two)):
    count = np.argwhere(array_two > 4500)
 
 numpycount = np.array(count)
-index = numpycount.copy()
+index_ins = numpycount.copy()
 
 
-new_arraytwo = np.delete(array_two, index)
+raw_df = raw_df.drop(raw_df.index[index_ins])
 
-plt.plot(new_arraytwo)
+plt.plot(raw_df['O2'])
 
 #[11]=========================================
 
