@@ -50,6 +50,26 @@ print('Negativo: {} '.format(neg))
 
 cleaned_df = raw_df.copy()
 plt.plot(cleaned_df)
+#[10]===================================
+copy_data = raw_df.copy()
+#we will separete o1 and o2 and try take out the peak.
+# inside our data we hve some noise, we need to take out for 
+# a best classification.  
+array_one = np.array(copy_data.pop('O1'))
+array_two = np.array(copy_data.pop('O2'))
+
+for lon in range(len(array_two)):
+   count = np.argwhere(array_two > 4500)
+
+numpycount = np.array(count)
+index = numpycount.copy()
+
+
+new_arraytwo = np.delete(array_two, index)
+
+plt.plot(new_arraytwo)
+
+#[11]=========================================
 
 # Use a utility from sklearn to split and shuffle our dataset.
 # sklearn.model_selection.train_test_split(*arrays, **options)[source]
